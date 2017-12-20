@@ -1,6 +1,4 @@
-# ubuntu-plesk-onyx
-
-
+# Plesk Onyx custom setup on Ubuntu 16.04 LTS
 
 **1) System update and packages cleanup**
 
@@ -55,7 +53,9 @@ plesk sbin pci_compliance_resolver --enable all
 ```
 bash <(wget -O - https://raw.githubusercontent.com/VirtuBox/plesk-nginx/master/nginx/build-deb.sh)
 ```
+
 **10) Set Panel.ini custom configuration**
 ```
 wget https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/usr/local/psa/admin/conf/panel.ini -O /usr/local/psa/admin/conf/panel.ini
+
 ```
