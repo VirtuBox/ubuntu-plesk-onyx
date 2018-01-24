@@ -20,7 +20,7 @@ wget -O /etc/security/limits.conf https://raw.githubusercontent.com/VirtuBox/ubu
 
 **4) Install netdata monitoring**
 ```
-bash <(curl -Ss https://my-netdata.io/kickstart-static64.sh) all
+bash <(curl -Ss https://my-netdata.io/kickstart.sh) all
 ```
 
 **5) Install MariaDB 10.1** (do not set any root password)
