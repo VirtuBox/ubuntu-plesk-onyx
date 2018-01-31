@@ -34,9 +34,7 @@ sudo apt install mariadb-server
 
 **6) Install the lastest Plesk Onyx release**
 ```
-wget https://installer.plesk.com/plesk-installer
-chmod +x ./plesk-installer
-./plesk-installer --all-versions
+sh <(curl https://autoinstall.plesk.com/plesk-installer || wget -O - https://autoinstall.plesk.com/plesk-installer)
 ```
 
 **7) Enable vps_optimized mode**
