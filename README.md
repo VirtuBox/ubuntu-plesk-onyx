@@ -13,7 +13,8 @@ sudo apt install haveged curl git unzip zip htop -y
 
 **3) Tweak Kernel sysctl configuration**
 ```
-sysctl -e -p <(curl -Ss https://git.virtubox.net/virtubox/debian-config/raw/master/etc/sysctl.conf)
+wget -O /etc/sysctl.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-nginx-web-server/master/etc/sysctl.conf
+sysctl -p
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 wget -O /etc/security/limits.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-nginx-web-server/master/etc/security/limits.conf
 ```
@@ -21,6 +22,14 @@ wget -O /etc/security/limits.conf https://raw.githubusercontent.com/VirtuBox/ubu
 **4) Install netdata monitoring**
 ```
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) all
+
+# save 40-60% of netdata memory
+echo 1 >/sys/kernel/mm/ksm/run
+echo 1000 >/sys/kernel/mm/ksm/sleep_millisecs
+
+# disable email notifications
+wget -O /etc/netdata/health_alarm_notify.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-nginx-web-server/master/etc/netdata/health_alarm_notify.conf
+service netdata restart
 ```
 
 **5) Install MariaDB 10.1** (do not set any root password)
