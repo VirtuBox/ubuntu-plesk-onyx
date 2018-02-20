@@ -58,7 +58,7 @@ plesk sbin pci_compliance_resolver --enable all
 
 **9) Compile the last Nginx release with plesk-nginx bash script**
 ```
-bash <(wget -O - https://raw.githubusercontent.com/VirtuBox/plesk-nginx/master/nginx/build-deb.sh)
+bash <(wget -O - https://raw.githubusercontent.com/VirtuBox/plesk-nginx/master/plesk-nginx.sh)
 ```
 
 **10) Set Panel.ini custom configuration**
