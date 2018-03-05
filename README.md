@@ -72,6 +72,9 @@ wget https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/usr/loc
 
 **Set custom php.ini configuration**
 ```
+# plesk-php56-fpm
+wget -O /opt/plesk/php/5.6/etc/php.ini https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/opt/plesk/php/5.6/etc/php.ini
+
 # plesk-php70-fpm
 wget -O /opt/plesk/php/7.0/etc/php.ini https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/opt/plesk/php/7.0/etc/php.ini
 
