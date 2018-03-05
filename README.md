@@ -87,3 +87,15 @@ wget -O /opt/plesk/php/7.2/etc/php.ini https://raw.githubusercontent.com/VirtuBo
 # apply new configuration 
 plesk bin php_handler --reread
 ```
+
+**Set custom nginx configuration**
+```
+# nginx.conf 
+wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/etc/nginx/nginx.conf
+
+# SSL/TLS strict configuration (TLSv1.2 & TLSv1.3)
+wget -O /etc/nginx/conf.d/ssl.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/etc/nginx/conf.d/ssl.conf
+
+# SSL/TLS Intermediate configuration (TLSv1.0 TLSv1.1 TLSv1.2 & TLSv1.3)
+wget -O /etc/nginx/conf.d/ssl.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/etc/nginx/conf.d/ssl-intermediate.conf
+```
