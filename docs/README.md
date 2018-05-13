@@ -98,4 +98,7 @@ wget -O /etc/nginx/conf.d/ssl.conf https://raw.githubusercontent.com/VirtuBox/ub
 
 # SSL/TLS Intermediate configuration (TLSv1.0 TLSv1.1 TLSv1.2 & TLSv1.3)
 wget -O /etc/nginx/conf.d/ssl.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/etc/nginx/conf.d/ssl-intermediate.conf
+
+# Security and performance tweaks
+wget -O /etc/nginx/conf.d/tweaks.conf https://raw.githubusercontent.com/VirtuBox/ubuntu-plesk-onyx/master/etc/nginx/conf.d/tweaks.conf
 ```
